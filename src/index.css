@@ -5,83 +5,83 @@
 
 @layer base {
   :root {
-    --background: 254 253 248; /* rolex-cream-50 */
-    --foreground: 15 38 17; /* rolex-green-950 */
+    --background: 255 255 255; /* pure white */
+    --foreground: 0 0 0; /* pure black */
 
     --card: 255 255 255;
-    --card-foreground: 15 38 17;
+    --card-foreground: 0 0 0;
 
     --popover: 255 255 255;
-    --popover-foreground: 15 38 17;
+    --popover-foreground: 0 0 0;
 
-    --primary: 26 77 53; /* rolex-green-500 */
-    --primary-foreground: 254 253 248;
+    --primary: 0 0 0; /* black */
+    --primary-foreground: 255 255 255;
 
-    --secondary: 253 244 217; /* rolex-cream-200 */
-    --secondary-foreground: 26 77 53;
+    --secondary: 245 245 245; /* light gray */
+    --secondary-foreground: 0 0 0;
 
-    --muted: 253 244 217;
-    --muted-foreground: 20 55 40;
+    --muted: 245 245 245;
+    --muted-foreground: 115 115 115;
 
-    --accent: 212 175 55; /* rolex-gold-400 */
-    --accent-foreground: 26 77 53;
+    --accent: 0 0 0; /* black accent */
+    --accent-foreground: 255 255 255;
 
     --destructive: 239 68 68;
-    --destructive-foreground: 254 253 248;
+    --destructive-foreground: 255 255 255;
 
-    --border: 251 236 192; /* rolex-cream-300 */
-    --input: 251 236 192;
-    --ring: 212 175 55;
+    --border: 229 229 229; /* light gray border */
+    --input: 229 229 229;
+    --ring: 0 0 0;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 254 253 248;
-    --sidebar-foreground: 26 77 53;
-    --sidebar-primary: 26 77 53;
-    --sidebar-primary-foreground: 254 253 248;
-    --sidebar-accent: 253 244 217;
-    --sidebar-accent-foreground: 26 77 53;
-    --sidebar-border: 251 236 192;
-    --sidebar-ring: 212 175 55;
+    --sidebar-background: 255 255 255;
+    --sidebar-foreground: 0 0 0;
+    --sidebar-primary: 0 0 0;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 245 245 245;
+    --sidebar-accent-foreground: 0 0 0;
+    --sidebar-border: 229 229 229;
+    --sidebar-ring: 0 0 0;
   }
 
   .dark {
-    --background: 15 38 17; /* rolex-green-950 */
-    --foreground: 254 253 248;
+    --background: 0 0 0; /* pure black */
+    --foreground: 255 255 255;
 
-    --card: 20 55 40;
-    --card-foreground: 254 253 248;
+    --card: 23 23 23;
+    --card-foreground: 255 255 255;
 
-    --popover: 20 55 40;
-    --popover-foreground: 254 253 248;
+    --popover: 23 23 23;
+    --popover-foreground: 255 255 255;
 
-    --primary: 212 175 55;
-    --primary-foreground: 26 77 53;
+    --primary: 255 255 255;
+    --primary-foreground: 0 0 0;
 
-    --secondary: 22 71 50;
-    --secondary-foreground: 254 253 248;
+    --secondary: 38 38 38;
+    --secondary-foreground: 255 255 255;
 
-    --muted: 22 71 50;
-    --muted-foreground: 188 229 204;
+    --muted: 38 38 38;
+    --muted-foreground: 163 163 163;
 
-    --accent: 184 134 11; /* rolex-gold-500 */
-    --accent-foreground: 254 253 248;
+    --accent: 255 255 255;
+    --accent-foreground: 0 0 0;
 
     --destructive: 220 38 38;
-    --destructive-foreground: 254 253 248;
+    --destructive-foreground: 255 255 255;
 
-    --border: 22 71 50;
-    --input: 22 71 50;
-    --ring: 212 175 55;
+    --border: 38 38 38;
+    --input: 38 38 38;
+    --ring: 255 255 255;
 
-    --sidebar-background: 15 38 17;
-    --sidebar-foreground: 254 253 248;
-    --sidebar-primary: 212 175 55;
-    --sidebar-primary-foreground: 26 77 53;
-    --sidebar-accent: 22 71 50;
-    --sidebar-accent-foreground: 254 253 248;
-    --sidebar-border: 22 71 50;
-    --sidebar-ring: 212 175 55;
+    --sidebar-background: 0 0 0;
+    --sidebar-foreground: 255 255 255;
+    --sidebar-primary: 255 255 255;
+    --sidebar-primary-foreground: 0 0 0;
+    --sidebar-accent: 38 38 38;
+    --sidebar-accent-foreground: 255 255 255;
+    --sidebar-border: 38 38 38;
+    --sidebar-ring: 255 255 255;
   }
 }
 
@@ -100,5 +100,142 @@
 
   p, span, div {
     @apply font-cormorant;
+  }
+}
+
+/* Modern UI/UX Enhancements */
+@layer components {
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-600;
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(209, 213, 219, 0.3);
+  }
+
+  .glass-dark {
+    backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(75, 85, 99, 0.3);
+  }
+
+  /* Floating animation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(45deg, #000000, #404040, #000000);
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Parallax effect */
+  .parallax {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  /* Smooth transitions */
+  .smooth-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Loading skeleton */
+  .skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+  }
+
+  @keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  /* Custom focus styles */
+  .focus-visible {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+  }
+
+  /* Micro-interactions */
+  .btn-micro {
+    transform: scale(1);
+    transition: transform 0.1s ease;
+  }
+
+  .btn-micro:active {
+    transform: scale(0.95);
+  }
+
+  /* Text reveal animation */
+  .text-reveal {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .text-reveal::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    animation: reveal 1s ease-in-out forwards;
+  }
+
+  @keyframes reveal {
+    to {
+      width: 0;
+    }
   }
 }
