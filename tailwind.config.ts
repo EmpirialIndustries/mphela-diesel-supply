@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,50 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Elegant Rolex-inspired colors
+				'rolex-green': {
+					50: '#f0f9f4',
+					100: '#dcf2e4',
+					200: '#bce5cc',
+					300: '#8cd2a8',
+					400: '#56b97c',
+					500: '#1a4d35',
+					600: '#16472f',
+					700: '#143b28',
+					800: '#123023',
+					900: '#0f261d',
+					950: '#071511'
+				},
+				'rolex-gold': {
+					50: '#fffbeb',
+					100: '#fef3c7',
+					200: '#fde68a',
+					300: '#fcd34d',
+					400: '#d4af37',
+					500: '#b8860b',
+					600: '#a0750a',
+					700: '#856309',
+					800: '#6b4e07',
+					900: '#523b05'
+				},
+				'rolex-cream': {
+					50: '#fefdf8',
+					100: '#fefaef',
+					200: '#fdf4d9',
+					300: '#fbecc0',
+					400: '#f8e0a0',
+					500: '#f4d077',
+					600: '#e6ba4a',
+					700: '#d19e2a',
+					800: '#a97d22',
+					900: '#896620'
 				}
+			},
+			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
+				'cormorant': ['Cormorant Garamond', 'serif'],
+				'inter': ['Inter', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
