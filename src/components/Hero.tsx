@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Play, Zap, Award, TrendingUp } from "lucide-react";
+import { ArrowDown, Play, Zap, Award, TrendingUp, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const Hero = () => {
